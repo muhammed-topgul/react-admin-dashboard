@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {Menu, MenuItem, ProSidebar} from "react-pro-sidebar";
 import {Box, IconButton, Typography, useTheme} from "@mui/material";
 import {Link} from "react-router-dom";
@@ -22,9 +22,9 @@ const Item = ({title, to, icon, selected, setSelected}) => {
     const colors = tokens(theme.palette.mode);
     return (
         <MenuItem
-            active={selected === title}
+            active={selected === to}
             style={{color: colors.grey[100]}}
-            onClick={() => setSelected(title)}
+            onClick={() => setSelected(to)}
             icon={icon}>
             <Typography>{title}</Typography>
             <Link to={to}/>
@@ -38,8 +38,14 @@ const Sidebar = () => {
     const [isCollapsed, setIsCollapsed] = useState(false);
     const [selected, setSelected] = useState("Dashboard");
 
+    useEffect(() => {
+        const path = window.location.pathname;
+        setSelected(path);
+    }, []);
+
     return (
         <Box
+            style={{height: "100%"}}
             sx={{
                 "& .pro-sidebar-inner": {
                     background: `${colors.primary[400]} !important`
