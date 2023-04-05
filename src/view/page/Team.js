@@ -9,8 +9,7 @@ import LockOpenOutlinedIcon from "@mui/icons-material/LockOpenOutlined";
 import SecurityOutlinedIcon from "@mui/icons-material/SecurityOutlined";
 
 const Team = () => {
-    const theme = useTheme();
-    const colors = tokens(theme.palette.mode);
+    const colors = tokens(useTheme().palette.mode);
 
     const columns = [
         {
@@ -71,7 +70,7 @@ const Team = () => {
 
     return (
         <Box m="20px">
-            <Header title="Team" subtitle="Welcome to your team"/>
+            <Header title="Team" subtitle="Managing your team members"/>
             <Box
                 m="40px 0 0 0"
                 height="75vh"
