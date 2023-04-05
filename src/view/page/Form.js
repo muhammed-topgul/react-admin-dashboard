@@ -1,10 +1,17 @@
 import React from 'react';
+import {Box} from "@mui/material";
+import Header from "../component/Header";
 
 const Form = () => {
     return (
-        <div>
-            Form
-        </div>
+        <Box m="20px">
+            <Box
+                display="flex"
+                justifyContent="space-between"
+                alignItems="center">
+                <Header title="Form" subtitle="Welcome to your form"/>
+            </Box>
+        </Box>
     );
 };
 
