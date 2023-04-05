@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Sidebar = () => {
+const Contact = () => {
     return (
         <div>
-            Sidebar
+            Contact
         </div>
     );
 };
 
-export default Sidebar;
+export default Contact;
