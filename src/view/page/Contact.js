@@ -48,6 +48,11 @@ const Contact = () => {
             flex: 1
         },
         {
+            field: "city",
+            headerName: "City",
+            flex: 1
+        },
+        {
             field: "zipCode",
             headerName: "Zip Code",
             flex: 1
