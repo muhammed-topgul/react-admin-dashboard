@@ -1,15 +1,17 @@
 import React from 'react';
-import {Box} from "@mui/material";
+import {Box, useTheme} from "@mui/material";
 import Header from "../component/Header";
+import GeographyChart from "../component/GeographyChart";
+import {tokens} from "../app/Theme";
 
 const Geography = () => {
+    const colors = tokens(useTheme().palette.mode);
+
     return (
         <Box m="20px">
-            <Box
-                display="flex"
-                justifyContent="space-between"
-                alignItems="center">
-                <Header title="Geography" subtitle="Welcome to your geography"/>
+            <Header title="Geography Chart" subtitle="Simple Geography Chart"/>
+            <Box height="75vh" border={`1px solid ${colors.grey[100]}`} borderRadius="4px">
+                <GeographyChart/>
             </Box>
         </Box>
     );

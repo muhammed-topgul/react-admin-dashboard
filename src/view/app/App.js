@@ -8,9 +8,9 @@ import Team from "../page/Team";
 import Contact from "../page/Contact";
 import Invoice from "../page/Invoice";
 import Form from "../page/Form";
-import BarChart from "../page/BarChart";
-import PieChart from "../page/PieChart";
-import LineChart from "../page/LineChart";
+import Bar from "../page/Bar";
+import Pie from "../page/Pie";
+import Line from "../page/Line";
 import FAQ from "../page/FAQ";
 import Geography from "../page/Geography";
 import Calendar from "../page/Calendar";
@@ -33,9 +33,9 @@ function App() {
                             <Route path="/contact" element={<Contact/>}/>
                             <Route path="/invoice" element={<Invoice/>}/>
                             <Route path="/form" element={<Form/>}/>
-                            <Route path="/bar-chart" element={<BarChart/>}/>
-                            <Route path="/pie-chart" element={<PieChart/>}/>
-                            <Route path="/line-chart" element={<LineChart/>}/>
+                            <Route path="/bar-chart" element={<Bar/>}/>
+                            <Route path="/pie-chart" element={<Pie/>}/>
+                            <Route path="/line-chart" element={<Line/>}/>
                             <Route path="/faq" element={<FAQ/>}/>
                             <Route path="/geography" element={<Geography/>}/>
                             <Route path="/calendar" element={<Calendar/>}/>
